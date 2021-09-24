@@ -40,7 +40,7 @@ def andengradspolynomium():
         ax = "x^2"
     elif a == -1:
         ax = "-x^2"
-    else:        
+    else:
         ax = str(a) + "x^2"
     if b == 0:
         bx = ""
@@ -52,7 +52,6 @@ def andengradspolynomium():
         bx = "+" + str(b)+"x"
     else:
         bx = str(b)+"x"
-    
     if c == 0:
         cc = ""
     elif c > 0:
@@ -60,7 +59,7 @@ def andengradspolynomium():
     else:
         cc = str(c)
     return ax + bx + cc
- 
+
 def mange_andengradspolynomier():
     for int in range(30): # antal her!
         print("\item")
@@ -100,7 +99,7 @@ def funktion():
                 if k == 1:
                     k = "+"
                 else:
-                    if k < 0:            
+                    if k < 0:
                         k = str(k)+"\cdot "
         streng += k + tilffunkt()
         first = False
@@ -124,7 +123,7 @@ def mange_funktioner():
         print("\item Elev id: 2i " + elevid)
         print("\\begin{enumerate}")
         for i in range(4):      # Antal opgaver pr. elev her
-            print("\item ")        
+            print("\item ")
             print("$$")
             print("f(x)=" + funktion())
             print("$$")
@@ -135,11 +134,11 @@ def andengradsligning():
     a = koef_a()
     while a == 0:
         a = koef_a()
-    r1 = koef2() 
+    r1 = koef2()
     r2 = koef2()
-    
+
     b = a * (-r1 -r2)
-    c = a * r1 * r2		
+    c = a * r1 * r2
     # uden loesning
     if random.randint(0,10) > 7:
         a = -a
@@ -147,7 +146,7 @@ def andengradsligning():
         ax = "x^2"
     elif a == -1:
         ax = "-x^2"
-    else:        
+    else:
         ax = str(a) + "x^2"
     if b == 0:
         bx = ""
@@ -159,7 +158,6 @@ def andengradsligning():
         bx = "+" + str(b)+"x"
     else:
         bx = str(b)+"x"
-    
     if c == 0:
         cc = ""
     elif c > 0:
@@ -167,14 +165,14 @@ def andengradsligning():
     else:
         cc = str(c)
     return "" + ax + bx + cc + "=0"
-    
+
 
 
 # Mange differentiable funktioner, med elev-id!
 mange_funktioner()
 
 # Mange andengradspolynomier, pa formen f(x)=ax2+bx+c
-#mange_andengradspolynomier()   
+#mange_andengradspolynomier()
 
 # Mange andengradsligninger pa formen ax2+bx+c=0.
 # Nogle uden losning, altsa d<0
