@@ -63,18 +63,18 @@ def andengradspolynomium():
  
 def mange_andengradspolynomier():
     for int in range(30): # antal her!
-        print "\item"
-        print "$\qquad"
-        print "f(x)=" + andengradspolynomium()
-        print "$"
+        print("\item")
+        print("$\qquad")
+        print("f(x)=" + andengradspolynomium())
+        print("$")
 
 
 def mange_andengradsligninger():
     for int in range(30): # antal her!
-        print "\item"
-        print "$\qquad"
-        print andengradsligning()
-        print "$"
+        print("\item")
+        print("$\qquad")
+        print(andengradsligning())
+        print("$")
 
 
 
@@ -96,10 +96,12 @@ def funktion():
         else:
             if k > 1:
                 k = "+" + str(k) + "\cdot "
-            if k == 1:
-                k = "+"
-            if k < 0:            
-                k = str(k)+"\cdot "
+            else:
+                if k == 1:
+                    k = "+"
+                else:
+                    if k < 0:            
+                        k = str(k)+"\cdot "
         streng += k + tilffunkt()
         first = False
     if (random.randint(0,10) < 8): #
@@ -119,14 +121,14 @@ def mange_funktioner():
             elevid = "0"+str(int)
         else:
             elevid = str(int)
-        print "\item Elev id: 2i " + elevid
-        print "\\begin{enumerate}"
+        print("\item Elev id: 2i " + elevid)
+        print("\\begin{enumerate}")
         for i in range(4):      # Antal opgaver pr. elev her
-            print "\item "        
-            print "$$"
-            print "f(x)=" + funktion()
-            print "$$"
-            print "\end{enumerate}"
+            print("\item ")        
+            print("$$")
+            print("f(x)=" + funktion())
+            print("$$")
+        print("\end{enumerate}")
 
 
 def andengradsligning():
@@ -168,14 +170,14 @@ def andengradsligning():
     
 
 
-mange_funktioner()
 # Mange differentiable funktioner, med elev-id!
+mange_funktioner()
 
-#mange_andengradspolynomier()   
 # Mange andengradspolynomier, pa formen f(x)=ax2+bx+c
+#mange_andengradspolynomier()   
 
-#mange_andengradsligninger()
 # Mange andengradsligninger pa formen ax2+bx+c=0.
 # Nogle uden losning, altsa d<0
+#mange_andengradsligninger()
 
 
